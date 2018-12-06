@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+
+{% block title %}Date and Time of today {% endblock %}
+
+{% block content %}
+
+	{# this is one line comment #}
+	{% if now %}
+		<p>Current date and time is {{ now }}</p>
+	{% else %}
+		<p>Now variable is not available</p>
+	{% endif %}
+
+	<p>Current scheme: <b> {{ request.scheme }}</b></p>
+	<p>BASE_DIR: <b>{{ base_dir }}</b></p>
+
+{% endblock %}
+
+{% block footer %}
+<p>All rights reseverd!</p>
+{{ block.super }}
+{% endblock %}

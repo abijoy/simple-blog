@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Session Login - {{block.super}}{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="section-inner clearfix">
+			<h6>Hi, {{ request.user.get_full_name }}</h6>
+			<p>User Details::</p>
+			<ul>
+				<li>Email: {{ request.user.email }}</li>
+				<li>SuperUser: {{ request.user.is_superuser }}</li>
+				<li>Staff: {{ request.user.is_staff }}</li>
+				<li>Date Joined: {{ request.user.date_joined }}</li>
+				<li>Last login: {{ request.user.last_login }}</li>
+			</ul>
+			<p></p>
+			<a href="{% url 'blog:logout' %}">Logout</a>
+		</div>
+	</div>
+{% endblock %}

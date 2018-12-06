@@ -1,0 +1,29 @@
+{% extends "cadmin/base.html" %}
+
+{% block content %}
+
+<div class="header">
+	<div class="section-inner clearfix">
+		<h2 class="title">Edit or Create Post</h2>
+		<div class="user-welcome">
+			<p>| {{ request.user }}</p>
+		</div>
+	</div>
+</div>
+
+		<!--<div class="sidebar">
+			<ul>
+				<li><a href="{% url 'blog:post_list' %}">Post</a></li>
+				<li><a href="">Category</a></li>
+				<li><a href="">Tag</a></li>
+				<li><a href="">Account Info</a></li>
+				<li><a href="">Change Password</a></li>
+				<li><a target="_blank" href="">View Site</a></li>
+				<li><a href="">Logout</a></li>
+			</ul>
+		</div>-->
+
+		{% block main %}
+
+		{% endblock %}
+{% endblock %}

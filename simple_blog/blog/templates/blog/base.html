@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}The Great Django Blog{% endblock %}</title>
+	<meta  name="viewport" content="width=device-width initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/reset.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}">
+	<script type="text/javascript" src="{% static 'blog/js/jquery.js' %}"></script>
+</head>
+<body>
+	<center>
+		<table bgcolor="#f6f6ef">
+	<tr>
+	<td>
+	<div class="navbar">
+		<div class="section-inner clearfix">
+			<nav>
+				<a href="/">BLog</a> |
+				<a href="/cadmin/post/add"><b>Add Post</b></a> |
+                <!--<a href="/feedback/">Contact Us</a> | -->
+                <a href="/signup/">Register</a> |
+                <a href="#" style="color: red">{{ request.user }}</a>
+                
+			</nav>
+		</div>
+	</div>
+</td>
+	</tr>
+	<tr>
+		<td>
+	{% block content %}
+
+	{% endblock %}
+</td>
+</tr>
+<tr><td>
+	{% block footer %}
+
+	<div class="footer">
+		<div class="section-inner clearfix">
+			<hr>
+			<p>&copy; The Great Django footer</p>
+		</div>
+	</div>
+
+	{% endblock %}
+</td></tr>
+</table>
+</center>
+</body>
+</html>

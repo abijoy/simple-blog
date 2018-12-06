@@ -1,0 +1,12 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Session Login - {{block.super}}{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="section-inner clearfix">
+			<p>You are logged out ... <a href="{% url 'cadmin:login' %}">Login</a> again</p>
+			
+		</div>
+	</div>
+{% endblock %}
